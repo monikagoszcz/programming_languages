@@ -1,13 +1,17 @@
 #ifndef _program01_h_
 #define _program01_h_
+#include <string>
+
+using namespace std;
 
 class komputer
 {
-	char procesor[20];
-	char dysk[20];
-	char pamiec[20];
+	public:
+	string procesor;
+	string dysk;
+	string pamiec;
 	int ilosc;
-	public: 
+	 
 	void dodaj();
 	void wypisz();
 };

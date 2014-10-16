@@ -1,7 +1,7 @@
-CC = gcc
+CC = g++
 CFLAGS = -Wall -pedantic 
 
-all:	program01
+all:	program01 clean
 program01:	main.o program01.o
 	$(CC) -o program01 main.o program01.o $(CFLAGS)
 program01.o:	program01.cpp program01.h

@@ -1,8 +1,6 @@
 #include <iostream>
 #include "program01.h"
 
-using namespace std;
-
 void komputer::dodaj()
 {
 	cout << "Podaj procesor: " << endl;
