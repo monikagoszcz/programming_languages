@@ -6,14 +6,14 @@ using namespace std;
 
 class cipher
 {
-	string input;
+		string input;
 	public:
-	void read(string);
-	void print();
-	cipher(string in);
-	cipher(){ };
-	friend string code(char &begin, cipher toBeCoded);
-	friend string code(cipher toBeCoded, char &begin);
+		cipher(){ };
+		cipher(string in);
+		void read(string);
+		void print();
+		friend string code(char &begin, cipher toBeCoded);
+		friend string code(cipher toBeCoded, char &begin);
 };
 
 string code(char &begin, cipher toBeCoded); // zaczyna sie od samogloski

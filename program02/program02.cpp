@@ -30,8 +30,9 @@ string code(char &begin, cipher toBeCoded) // zaczyna sie od samogloski
 			else
 			{
 				kod += 42; 
-				output[j] = (int)kod;
+				
 			}
+			output[j] = (char)kod;
 		}
 		else if ( kod >= 141 && kod <= 172 ) //małe litery 
 		{
@@ -43,7 +44,7 @@ string code(char &begin, cipher toBeCoded) // zaczyna sie od samogloski
 			{
 				kod -= 43;
 			}
-			output[j] = (int)kod;
+			output[j] = (char)kod;
 		}
 		else if ( kod >= 60 && kod <= 71 ) //cyfry 
 		{
@@ -51,7 +52,7 @@ string code(char &begin, cipher toBeCoded) // zaczyna sie od samogloski
 				kod = 60; 
 			else 
 				kod += 1;
-			output[j] = (int)kod;
+			output[j] = (char)kod;
 		}
 		else
 		{
@@ -77,8 +78,9 @@ string code(cipher toBeCoded, char &begin) // zaczyna sie od spolgloski
 			else
 			{
 				kod += 42; 
-				output[j] = (int)kod;
+				
 			}
+			output[j] = (char)kod;
 		}
 		else if ( kod >= 141 && kod <= 172 ) //małe litery 
 		{
@@ -90,7 +92,7 @@ string code(cipher toBeCoded, char &begin) // zaczyna sie od spolgloski
 			{
 				kod -= 41;
 			}
-			output[j] = (int)kod;
+			output[j] = (char)kod;
 		}
 		else if ( kod >= 60 && kod <= 71 ) //cyfry 
 		{
@@ -100,7 +102,7 @@ string code(cipher toBeCoded, char &begin) // zaczyna sie od spolgloski
 				kod = 60;
 			else 
 				kod += 2;
-			output[j] = (int)kod;
+			output[j] = (char)kod;
 		}
 		else
 		{
