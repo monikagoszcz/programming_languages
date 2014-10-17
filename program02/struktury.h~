@@ -1,0 +1,19 @@
+#ifndef _struktury_h_
+#define _struktury_h_
+#include <string>
+
+using namespace std;
+
+class cipher
+{
+	string input;
+	public:
+	void read(string);
+	void print();
+	friend string code(char &poczatek, cipher);
+	friend string code(cipher, char &poczatek);
+};
+string code(char &poczatek, cipher); // zaczyna sie od samogloski
+string code(cipher, char &poczatek); // zaczyna sie od spolgloski
+
+#endif

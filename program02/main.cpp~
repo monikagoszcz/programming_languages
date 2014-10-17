@@ -1,0 +1,36 @@
+#include <iostream>
+#include "struktury.h"
+
+using namespace std;
+ 
+int main()
+{
+	cout << endl << "Wprowadz ciag znakow" << endl;
+	string badany_tekst;
+	cin >> badany_tekst;
+	
+	cipher first;
+	first.read(badany_tekst);
+	first.print();
+	cipher zaszyfrowany;
+	
+	string samogloski="aeiouAEIOU"; 
+	string spolgloski="bcdfghjklmnpqrstwxzBCDFGHJKLMNPRQSTWXZ";
+	
+	char poczatek;
+	for(size_t j= 0; j<badany_tekst.length(); j++) 
+	{
+		if (badany_tekst[0]==samogloski[j])
+		{
+			poczatek = badany_tekst[0];
+			zaszyfrowany.read(code(poczatek, first));
+		}
+		else if (badany_tekst[0]==spolgloski[j]) 
+		{
+			poczatek = badany_tekst[0]; 
+			zaszyfrowany.read(code(first, poczatek));
+		}
+	}
+	
+	return 0;
+}

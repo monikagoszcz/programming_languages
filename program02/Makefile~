@@ -1,0 +1,12 @@
+CC = g++
+CFLAGS = -Wall -pedantic 
+
+all:	program02
+program02:	main.o funkcje.o
+	$(CC) -o program02 main.o funkcje.o $(CFLAGS) $(LIBS)
+funkcje.o:	funkcje.cpp struktury.h
+	$(CC) -o funkcje.o -c funkcje.cpp $(CFLAGS)
+main.o:	main.cpp struktury.h
+	$(CC) -o main.o -c main.cpp $(CFLAGS)
+clean:
+	rm -f *.o

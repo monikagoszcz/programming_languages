@@ -1,0 +1,48 @@
+#include <iostream>
+#include "struktury.h"
+
+void cipher::read(string given)
+{
+	input = given;
+}
+void cipher::print()
+{
+	cout << endl << "Ciąg znaków to: " << endl << input << endl;
+}
+
+string code(char &poczatek, cipher szyfr) // zaczyna sie od samogloski
+{
+	string output;
+	
+	for(size_t j = 0; j < szyfr.input.length(); j++) 
+	{
+		int kod = (int)szyfr.input[j];
+		if (kod >=101 && kod <= 132 ) //wielkie litery
+		{
+			
+			else
+			{
+				kod += 52; 
+				output[j] = (int)kod;
+			}
+		}
+		else if (kod >= 141 && kod <= 172 ) //małe litery 
+		{
+			kod -= 43; 
+			output[j] = (int)kod;
+		}
+		else if (kod >= 60 && kod <= 71 ) //małe litery 
+		{
+			if(kod == 71) kod = 60; 
+			else kod += 1;
+			output[j] = (int)kod;
+		}
+	}
+	
+	return output;
+}
+string code(cipher szyfr, char &poczatek) // zaczyna sie od spolgloski
+{
+	string output;
+	return output;
+}
